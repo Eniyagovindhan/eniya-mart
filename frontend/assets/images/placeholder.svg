@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-label="Product image coming soon">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e5e7eb"/>
+      <stop offset="1" stop-color="#cbd5e1"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="480" fill="url(#g)"/>
+  <g transform="translate(230,130)" fill="none" stroke="#64748b" stroke-width="12" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M20 120 L180 120 L162 240 L38 240 Z"/>
+    <path d="M60 120 C60 66 140 66 140 120"/>
+    <path d="M74 168 L126 168 M68 200 L132 200"/>
+  </g>
+  <text x="320" y="430" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="26" fill="#475569">Image coming soon</text>
+</svg>

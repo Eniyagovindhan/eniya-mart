@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Create account – ENIYA MART</title>
+  <meta name="description" content="Create your free ENIYA MART account.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="/css/style.css" rel="stylesheet">
+</head>
+<body data-page="register">
+
+  <header class="em-header">
+    <div class="em-nav d-flex align-items-center">
+      <a href="/" class="em-logo" aria-label="ENIYA MART home">
+        <img src="/assets/images/logo.svg" alt="ENIYA MART" height="34">
+      </a>
+
+      <div class="em-deliver d-none d-xl-flex">
+        <span class="em-micro">Deliver to</span>
+        <strong><i class="bi bi-geo-alt"></i> United States</strong>
+      </div>
+
+      <form class="em-search" id="navSearchForm" role="search">
+        <select class="em-search-select" id="navSearchCategory" aria-label="Search within category">
+          <option value="">All</option>
+        </select>
+        <input class="em-search-input" id="navSearchInput" type="search" placeholder="Search ENIYA MART" aria-label="Search products" autocomplete="off">
+        <button class="em-search-btn" type="submit" aria-label="Search"><i class="bi bi-search"></i></button>
+      </form>
+
+      <div class="em-nav-links d-flex align-items-center">
+        <a href="/account.html" class="em-nav-link" id="navAuthLink">
+          <span class="em-micro" id="navAuthTop">Hello, sign in</span>
+          <strong id="navAuthMain">Account &amp; Lists</strong>
+        </a>
+        <a href="/orders.html" class="em-nav-link d-none d-sm-block">
+          <span class="em-micro">Returns</span>
+          <strong>&amp; Orders</strong>
+        </a>
+        <a href="/cart.html" class="em-nav-link em-cart-link">
+          <i class="bi bi-cart3 fs-5"></i>
+          <span class="em-cart-badge em-cart-badge--hidden" id="cartCount">0</span>
+          <strong class="ms-1">Cart</strong>
+        </a>
+        <button type="button" class="btn btn-sm btn-em-outline em-logout d-none" id="navLogoutBtn">Logout</button>
+      </div>
+
+      <button type="button" class="em-burger btn btn-link text-white p-1" id="navBurger" aria-label="Toggle menu">
+        <i class="bi bi-list fs-2"></i>
+      </button>
+    </div>
+
+    <div class="em-nav2 d-flex align-items-center gap-2">
+      <a href="/products.html" class="em-nav2-link fw-bold"><i class="bi bi-list"></i> All</a>
+      <div class="dropdown">
+        <a class="em-nav2-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Shop by Category</a>
+        <ul class="dropdown-menu em-dropdown" id="navCategoryMenu">
+          <li><a class="dropdown-item" href="/products.html">All products</a></li>
+        </ul>
+      </div>
+      <a href="/products.html?sort=price-asc" class="em-nav2-link">Today's Deals</a>
+      <a href="/products.html?sort=newest" class="em-nav2-link">New Arrivals</a>
+      <a href="/orders.html" class="em-nav2-link">Track Order</a>
+      <a href="/account.html" class="em-nav2-link">My Account</a>
+      <span class="em-nav2-tagline ms-auto d-none d-lg-inline">Everything You Need. Easy Shopping.</span>
+    </div>
+  </header>
+
+  <main class="em-auth-wrap">
+    <div class="em-auth-card">
+      <div class="em-brand-line">
+        <img src="/assets/images/logo.svg" alt="ENIYA MART" height="34">
+      </div>
+
+      <h1>Create account</h1>
+      <p class="em-auth-sub">Join ENIYA MART — it takes less than a minute.</p>
+
+      <form id="registerForm" novalidate>
+        <div class="mb-3">
+          <label class="form-label" for="regName">Your name</label>
+          <input class="form-control" id="regName" name="name" type="text" autocomplete="name"
+                 placeholder="First and last name" required minlength="2" maxlength="80">
+          <div class="invalid-feedback d-none" data-error-for="name"></div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="regEmail">Email address</label>
+          <input class="form-control" id="regEmail" name="email" type="email" autocomplete="email"
+                 placeholder="you@example.com" required>
+          <div class="invalid-feedback d-none" data-error-for="email"></div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="regPhone">Mobile number (optional)</label>
+          <input class="form-control" id="regPhone" name="phone" type="tel" autocomplete="tel"
+                 placeholder="+1 555 000 0000" maxlength="20">
+          <div class="invalid-feedback d-none" data-error-for="phone"></div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="regPassword">Password</label>
+          <div class="em-pw-wrap">
+            <input class="form-control pe-5" id="regPassword" name="password" type="password"
+                   autocomplete="new-password" placeholder="At least 6 characters" required minlength="6" maxlength="100">
+            <button type="button" class="em-pw-toggle" data-pw-toggle="#regPassword">Show</button>
+          </div>
+          <div class="invalid-feedback d-none" data-error-for="password"></div>
+          <div class="form-text">Use at least 6 characters.</div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="regConfirm">Confirm password</label>
+          <div class="em-pw-wrap">
+            <input class="form-control pe-5" id="regConfirm" name="confirmPassword" type="password"
+                   autocomplete="new-password" placeholder="Repeat your password" required>
+            <button type="button" class="em-pw-toggle" data-pw-toggle="#regConfirm">Show</button>
+          </div>
+          <div class="invalid-feedback d-none" data-error-for="confirmPassword"></div>
+        </div>
+
+        <button class="btn btn-em w-100 mt-2" id="registerSubmit" type="submit">Create your ENIYA MART account</button>
+      </form>
+
+      <div class="em-auth-links">
+        <span>Already have an account?</span>
+        <a href="/login.html">Sign in</a>
+      </div>
+
+      <div class="em-auth-foot">
+        By creating an account, you agree to ENIYA MART's Conditions of Use and Privacy Notice.
+      </div>
+    </div>
+  </main>
+
+  <footer class="em-footer">
+    <div class="em-footer-bottom py-3">
+      <div class="container d-flex align-items-center justify-content-center flex-wrap gap-3">
+        <img src="/assets/images/logo.svg" alt="ENIYA MART" height="28">
+        <span>© 2026 ENIYA MART, Inc. — Everything You Need. Easy Shopping.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/js/api.js"></script>
+  <script src="/js/main.js"></script>
+  <script src="/js/auth.js"></script>
+</body>
+</html>

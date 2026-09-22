@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 60" role="img" aria-label="ENIYA MART logo">
+  <rect width="220" height="60" rx="10" fill="#131921"/>
+  <path d="M18 16 h9 v28 h-9 z M33 16 h9 v28 h-9 z M48 16 h9 v28 h-9 z" fill="#febd69"/>
+  <path d="M18 16 h39 v7 h-39 z" fill="#febd69" opacity="0.55"/>
+  <text x="70" y="38" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="bold" fill="#ffffff">ENIYA</text>
+  <text x="148" y="38" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="bold" fill="#febd69">MART</text>
+</svg>

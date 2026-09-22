@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-label="Footwear">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0e7490"/>
+      <stop offset="1" stop-color="#22d3ee"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="480" fill="url(#g)"/>
+  <circle cx="520" cy="110" r="130" fill="#ffffff" opacity="0.08"/>
+  <circle cx="110" cy="360" r="110" fill="#ffffff" opacity="0.08"/>
+  <g transform="translate(140,120)">
+    <path d="M20 180 C40 120 60 60 110 60 C150 60 160 96 190 118 C230 148 280 156 316 172 C344 184 350 210 326 224 C300 240 60 240 34 224 C18 214 14 200 20 180 Z"
+          fill="#ffffff" opacity="0.96"/>
+    <path d="M60 150 L120 132 M74 176 L136 158 M92 200 L152 184" stroke="#0e7490" stroke-width="10" stroke-linecap="round"/>
+    <path d="M24 226 L332 226" stroke="#0891b2" stroke-width="12" stroke-linecap="round"/>
+    <circle cx="290" cy="196" r="12" fill="#0e7490"/>
+  </g>
+  <text x="320" y="440" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="bold" fill="#ffffff">Footwear</text>
+</svg>

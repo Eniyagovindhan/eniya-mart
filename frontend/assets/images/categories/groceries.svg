@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-label="Groceries">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#065f46"/>
+      <stop offset="1" stop-color="#84cc16"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="480" fill="url(#g)"/>
+  <circle cx="540" cy="100" r="130" fill="#ffffff" opacity="0.08"/>
+  <circle cx="90" cy="370" r="110" fill="#ffffff" opacity="0.08"/>
+  <g transform="translate(200,60)">
+    <path d="M20 90 L240 90 L214 280 L46 280 Z" fill="#ffffff" opacity="0.95"/>
+    <path d="M70 90 C70 30 190 30 190 90" fill="none" stroke="#ffffff" stroke-width="14" stroke-linecap="round"/>
+    <rect x="58" y="120" width="144" height="16" rx="8" fill="#065f46" opacity="0.35"/>
+    <circle cx="90" cy="190" r="26" fill="#fde68a"/>
+    <circle cx="152" cy="176" r="20" fill="#fca5a5"/>
+    <path d="M84 240 q26 -34 52 0 q26 34 52 0" fill="none" stroke="#065f46" stroke-width="10" stroke-linecap="round"/>
+  </g>
+  <text x="320" y="440" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="bold" fill="#ffffff">Groceries</text>
+</svg>

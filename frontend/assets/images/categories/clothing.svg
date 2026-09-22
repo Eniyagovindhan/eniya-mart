@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-label="Clothing">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7c3aed"/>
+      <stop offset="1" stop-color="#db2777"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="480" fill="url(#g)"/>
+  <circle cx="120" cy="110" r="120" fill="#ffffff" opacity="0.08"/>
+  <circle cx="540" cy="360" r="130" fill="#ffffff" opacity="0.08"/>
+  <g transform="translate(215,70)">
+    <path d="M40 40 L95 10 L135 34 L175 10 L230 40 L262 104 L214 130 L206 96 L206 270 L64 270 L64 96 L56 130 L8 104 Z"
+          fill="#ffffff" opacity="0.95"/>
+    <path d="M95 10 C110 44 160 44 175 10" fill="none" stroke="#c4b5fd" stroke-width="8"/>
+    <rect x="88" y="150" width="94" height="64" rx="8" fill="#7c3aed" opacity="0.25"/>
+  </g>
+  <text x="320" y="440" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="bold" fill="#ffffff">Clothing</text>
+</svg>

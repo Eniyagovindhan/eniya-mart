@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-label="Beauty">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#be185d"/>
+      <stop offset="1" stop-color="#f9a8d4"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="480" fill="url(#g)"/>
+  <circle cx="520" cy="120" r="130" fill="#ffffff" opacity="0.1"/>
+  <circle cx="110" cy="350" r="110" fill="#ffffff" opacity="0.1"/>
+  <g transform="translate(215,60)">
+    <rect x="60" y="0" width="90" height="40" rx="8" fill="#831843"/>
+    <rect x="76" y="40" width="58" height="34" fill="#fce7f3"/>
+    <path d="M20 90 C20 74 34 74 46 74 L164 74 C176 74 190 74 190 90 L190 260 C190 286 172 300 146 300 L64 300 C38 300 20 286 20 260 Z"
+          fill="#ffffff" opacity="0.96"/>
+    <rect x="44" y="120" width="122" height="90" rx="10" fill="#fce7f3"/>
+    <path d="M70 168 q22 -34 44 0 q22 34 44 0" fill="none" stroke="#be185d" stroke-width="10" stroke-linecap="round"/>
+    <circle cx="164" cy="76" r="18" fill="#f9a8d4"/>
+  </g>
+  <text x="320" y="440" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="bold" fill="#ffffff">Beauty</text>
+</svg>

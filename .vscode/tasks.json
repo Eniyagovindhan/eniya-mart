@@ -1,0 +1,40 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Maven: compile backend",
+      "type": "shell",
+      "command": "mvn -f \"${workspaceFolder}/backend/pom.xml\" -B compile",
+      "group": "build",
+      "problemMatcher": ["$javac"]
+    },
+    {
+      "label": "Maven: package backend (jar)",
+      "type": "shell",
+      "command": "mvn -f \"${workspaceFolder}/backend/pom.xml\" -B clean package",
+      "group": "build",
+      "problemMatcher": ["$javac"]
+    },
+    {
+      "label": "Run ENIYA MART (spring-boot:run)",
+      "type": "shell",
+      "command": "mvn -f \"${workspaceFolder}/backend/pom.xml\" -B spring-boot:run",
+      "group": "build",
+      "isBackground": true,
+      "problemMatcher": {
+        "owner": "spring-boot",
+        "pattern": {
+          "regexp": "^(.*ERROR.*)$",
+          "message": 1
+        }
+      }
+    },
+    {
+      "label": "MySQL: import database.sql",
+      "type": "shell",
+      "command": "mysql -u root -p < \"${workspaceFolder}/backend/database.sql\"",
+      "group": "none",
+      "problemMatcher": []
+    }
+  ]
+}

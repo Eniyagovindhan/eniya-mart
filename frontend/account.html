@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Account – ENIYA MART</title>
+  <meta name="description" content="Manage your ENIYA MART profile, password and orders.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="/css/style.css" rel="stylesheet">
+</head>
+<body data-page="account">
+
+  <header class="em-header">
+    <div class="em-nav d-flex align-items-center">
+      <a href="/" class="em-logo" aria-label="ENIYA MART home">
+        <img src="/assets/images/logo.svg" alt="ENIYA MART" height="34">
+      </a>
+
+      <div class="em-deliver d-none d-xl-flex">
+        <span class="em-micro">Deliver to</span>
+        <strong><i class="bi bi-geo-alt"></i> United States</strong>
+      </div>
+
+      <form class="em-search" id="navSearchForm" role="search">
+        <select class="em-search-select" id="navSearchCategory" aria-label="Search within category">
+          <option value="">All</option>
+        </select>
+        <input class="em-search-input" id="navSearchInput" type="search" placeholder="Search ENIYA MART" aria-label="Search products" autocomplete="off">
+        <button class="em-search-btn" type="submit" aria-label="Search"><i class="bi bi-search"></i></button>
+      </form>
+
+      <div class="em-nav-links d-flex align-items-center">
+        <a href="/account.html" class="em-nav-link" id="navAuthLink">
+          <span class="em-micro" id="navAuthTop">Hello, sign in</span>
+          <strong id="navAuthMain">Account &amp; Lists</strong>
+        </a>
+        <a href="/orders.html" class="em-nav-link d-none d-sm-block">
+          <span class="em-micro">Returns</span>
+          <strong>&amp; Orders</strong>
+        </a>
+        <a href="/cart.html" class="em-nav-link em-cart-link">
+          <i class="bi bi-cart3 fs-5"></i>
+          <span class="em-cart-badge em-cart-badge--hidden" id="cartCount">0</span>
+          <strong class="ms-1">Cart</strong>
+        </a>
+        <button type="button" class="btn btn-sm btn-em-outline em-logout d-none" id="navLogoutBtn">Logout</button>
+      </div>
+
+      <button type="button" class="em-burger btn btn-link text-white p-1" id="navBurger" aria-label="Toggle menu">
+        <i class="bi bi-list fs-2"></i>
+      </button>
+    </div>
+
+    <div class="em-nav2 d-flex align-items-center gap-2">
+      <a href="/products.html" class="em-nav2-link fw-bold"><i class="bi bi-list"></i> All</a>
+      <div class="dropdown">
+        <a class="em-nav2-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Shop by Category</a>
+        <ul class="dropdown-menu em-dropdown" id="navCategoryMenu">
+          <li><a class="dropdown-item" href="/products.html">All products</a></li>
+        </ul>
+      </div>
+      <a href="/products.html?sort=price-asc" class="em-nav2-link">Today's Deals</a>
+      <a href="/products.html?sort=newest" class="em-nav2-link">New Arrivals</a>
+      <a href="/orders.html" class="em-nav2-link">Track Order</a>
+      <a href="/account.html" class="em-nav2-link">My Account</a>
+      <span class="em-nav2-tagline ms-auto d-none d-lg-inline">Everything You Need. Easy Shopping.</span>
+    </div>
+  </header>
+
+  <main class="container py-4">
+    <div class="em-section-head">
+      <div>
+        <h2>My Account</h2>
+        <span class="em-sub">Manage your profile, security and orders</span>
+      </div>
+      <a href="/orders.html" class="fw-semibold">View order history →</a>
+    </div>
+
+    <div class="em-account-grid">
+      <!-- ------------------------- SIDE --------------------------- -->
+      <aside class="em-panel em-account-side text-center text-md-start">
+        <div class="d-flex flex-column align-items-center align-md-start">
+          <div class="em-avatar" id="acctAvatar">E</div>
+          <h5 class="mb-0" id="acctName">Loading…</h5>
+          <div class="text-muted small" id="acctEmail"></div>
+          <span class="badge bg-dark mt-2" id="acctRole">Customer</span>
+        </div>
+
+        <div class="list-group list-group-flush mt-3">
+          <a class="list-group-item" href="/orders.html"><i class="bi bi-box-seam me-2"></i>Your Orders</a>
+          <a class="list-group-item" href="/cart.html"><i class="bi bi-cart3 me-2"></i>Your Cart</a>
+          <a class="list-group-item active" href="/account.html"><i class="bi bi-person me-2"></i>Account Settings</a>
+        </div>
+
+        <div class="row g-2 mt-3 text-center">
+          <div class="col-6">
+            <div class="border rounded p-2">
+              <div class="fs-5 fw-bold" id="statOrders">—</div>
+              <div class="small text-muted">Orders</div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="border rounded p-2">
+              <div class="fs-6 fw-bold mt-1" id="statSpent">—</div>
+              <div class="small text-muted">Total spent</div>
+            </div>
+          </div>
+        </div>
+
+        <button class="btn btn-em-outline w-100 mt-3" id="accountLogout" type="button">
+          <i class="bi bi-box-arrow-right me-1"></i> Sign out
+        </button>
+      </aside>
+
+      <!-- ------------------------- MAIN --------------------------- -->
+      <section class="d-flex flex-column gap-3">
+        <!-- profile -->
+        <div class="em-panel">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h5 class="mb-0">Profile information</h5>
+            <button class="btn btn-sm btn-em-outline" id="editToggle" type="button">Edit</button>
+          </div>
+
+          <div id="profileDisplay">
+            <div class="em-info-row"><span>Full name</span><span id="rowName">—</span></div>
+            <div class="em-info-row"><span>Email address</span><span id="rowEmail">—</span></div>
+            <div class="em-info-row"><span>Mobile number</span><span id="rowPhone">—</span></div>
+            <div class="em-info-row"><span>Member since</span><span id="rowMember">—</span></div>
+          </div>
+
+          <form id="profileForm" class="d-none mt-3" novalidate>
+            <div class="mb-3">
+              <label class="form-label" for="editName">Full name</label>
+              <input class="form-control" id="editName" name="name" type="text" required minlength="2" maxlength="80">
+              <div class="invalid-feedback d-none" data-error-for="name"></div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="editPhone">Mobile number</label>
+              <input class="form-control" id="editPhone" name="phone" type="tel" maxlength="20">
+              <div class="invalid-feedback d-none" data-error-for="phone"></div>
+            </div>
+            <div class="d-flex gap-2">
+              <button class="btn btn-em" id="profileSave" type="submit">Save changes</button>
+              <button class="btn btn-em-outline" id="editCancel" type="button">Cancel</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- password -->
+        <div class="em-panel">
+          <h5 class="mb-1">Change password</h5>
+          <p class="text-muted small">Your password is stored as a BCrypt hash and never in plain text.</p>
+
+          <form id="passwordForm" novalidate>
+            <div class="mb-3">
+              <label class="form-label" for="currentPassword">Current password</label>
+              <input class="form-control" id="currentPassword" name="currentPassword" type="password"
+                     autocomplete="current-password" required>
+              <div class="invalid-feedback d-none" data-error-for="currentPassword"></div>
+            </div>
+
+            <div class="row g-3 mb-3">
+              <div class="col-md-6">
+                <label class="form-label" for="newPassword">New password</label>
+                <input class="form-control" id="newPassword" name="newPassword" type="password"
+                       autocomplete="new-password" required minlength="6" maxlength="100">
+                <div class="invalid-feedback d-none" data-error-for="newPassword"></div>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label" for="confirmPassword">Confirm new password</label>
+                <input class="form-control" id="confirmPassword" name="confirmPassword" type="password"
+                       autocomplete="new-password" required minlength="6">
+                <div class="invalid-feedback d-none" data-error-for="confirmPassword"></div>
+              </div>
+            </div>
+
+            <button class="btn btn-em" id="passwordSave" type="submit">Update password</button>
+          </form>
+        </div>
+
+        <!-- security note -->
+        <div class="em-panel">
+          <h5 class="mb-2">Account security</h5>
+          <ul class="mb-0 small text-muted" style="list-style:none;padding:0">
+            <li class="mb-1"><i class="bi bi-check-circle text-success me-1"></i> JWT session authentication (expires in 24 hours)</li>
+            <li class="mb-1"><i class="bi bi-check-circle text-success me-1"></i> Passwords hashed with BCrypt</li>
+            <li class="mb-1"><i class="bi bi-check-circle text-success me-1"></i> Order data restricted to your account only</li>
+            <li><i class="bi bi-check-circle text-success me-1"></i> <a href="/forgot-password.html">Reset your password anytime</a></li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="em-footer">
+    <a href="#" class="em-back-top" data-back-to-top>Back to top</a>
+    <div class="em-footer-main py-5">
+      <div class="container">
+        <div class="row g-4 text-center text-md-start">
+          <div class="col-6 col-md-3">
+            <h6>Get to Know Us</h6>
+            <ul>
+              <li><a href="/">About ENIYA MART</a></li>
+              <li><a href="/products.html">Careers</a></li>
+              <li><a href="/products.html">Sell products</a></li>
+              <li><a href="/products.html">Sustainability</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-3">
+            <h6>Make Money with Us</h6>
+            <ul>
+              <li><a href="/products.html">Sell on ENIYA MART</a></li>
+              <li><a href="/products.html">Become an Affiliate</a></li>
+              <li><a href="/products.html">Advertise products</a></li>
+              <li><a href="/products.html">Fulfilment services</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-3">
+            <h6>Payment Products</h6>
+            <ul>
+              <li><a href="/account.html">ENIYA MART Card</a></li>
+              <li><a href="/account.html">Shop with Points</a></li>
+              <li><a href="/account.html">Reload Your Balance</a></li>
+              <li><a href="/account.html">Currency Converter</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-3">
+            <h6>Let Us Help You</h6>
+            <ul>
+              <li><a href="/account.html">Your Account</a></li>
+              <li><a href="/orders.html">Your Orders</a></li>
+              <li><a href="/cart.html">Your Cart</a></li>
+              <li><a href="/forgot-password.html">Forgot Password</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="em-footer-bottom py-3">
+      <div class="container d-flex align-items-center justify-content-center flex-wrap gap-3">
+        <img src="/assets/images/logo.svg" alt="ENIYA MART" height="28">
+        <span>© 2026 ENIYA MART, Inc. — Everything You Need. Easy Shopping.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/js/api.js"></script>
+  <script src="/js/main.js"></script>
+  <script src="/js/account.js"></script>
+</body>
+</html>

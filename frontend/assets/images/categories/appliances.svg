@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-label="Home Appliances">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#334155"/>
+      <stop offset="1" stop-color="#0ea5e9"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="480" fill="url(#g)"/>
+  <circle cx="120" cy="110" r="120" fill="#ffffff" opacity="0.08"/>
+  <circle cx="540" cy="370" r="130" fill="#ffffff" opacity="0.08"/>
+  <g transform="translate(190,60)">
+    <rect x="0" y="0" width="260" height="300" rx="20" fill="#f8fafc" opacity="0.96"/>
+    <rect x="24" y="26" width="212" height="46" rx="10" fill="#e2e8f0"/>
+    <circle cx="60" cy="49" r="12" fill="#0ea5e9"/>
+    <rect x="88" y="42" width="120" height="14" rx="7" fill="#94a3b8"/>
+    <circle cx="130" cy="190" r="78" fill="#cbd5e1"/>
+    <circle cx="130" cy="190" r="58" fill="#334155"/>
+    <path d="M130 146 A44 44 0 0 1 174 190 L130 190 Z" fill="#38bdf8" opacity="0.9"/>
+    <path d="M130 234 A44 44 0 0 1 86 190 L130 190 Z" fill="#0284c7" opacity="0.7"/>
+    <rect x="40" y="278" width="40" height="14" rx="7" fill="#94a3b8"/>
+    <rect x="180" y="278" width="40" height="14" rx="7" fill="#94a3b8"/>
+  </g>
+  <text x="320" y="440" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="bold" fill="#ffffff">Home Appliances</text>
+</svg>

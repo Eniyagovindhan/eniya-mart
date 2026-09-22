@@ -1,0 +1,33 @@
+{
+  "java.configuration.updateBuildConfiguration": "automatic",
+  "java.configuration.runtimes": [
+    {
+      "name": "JavaSE-17",
+      "path": "${env:JAVA_HOME}",
+      "default": true
+    }
+  ],
+  "java.debug.settings.javaArgs": "-Xmx1024m",
+  "java.debug.settings.console": "integratedTerminal",
+  "java.errors.incompleteClasspathSeverity": "warning",
+  "files.exclude": {
+    "**/target": true
+  },
+  "editor.formatOnSave": false,
+  "editor.tabSize": 4,
+  "editor.insertSpaces": true,
+  "[java]": {
+    "editor.tabSize": 4
+  },
+  "[html]": {
+    "editor.tabSize": 2
+  },
+  "[css]": {
+    "editor.tabSize": 2
+  },
+  "[javascript]": {
+    "editor.tabSize": 2
+  },
+  "liveServer.settings.port": 5500,
+  "liveServer.settings.root": "/frontend"
+}
