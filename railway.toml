@@ -8,7 +8,11 @@ dockerfilePath = "./Dockerfile"
 [deploy]
 # "/" serves index.html once Spring Boot is fully up (DB connected,
 # seeder finished), so a 200 here means the whole app is ready.
+# 300s = Railway's default window; first boot also creates the schema
+# and seeds 24 products against a fresh MySQL.
 healthcheckPath = "/"
-healthcheckTimeout = 120
+healthcheckTimeout = 300
+# Tolerate the MySQL plugin warming up on first boot: crash-restart
+# a few times while the database provisions instead of failing fast.
 restartPolicyType = "ON_FAILURE"
-restartPolicyMaxRetries = 5
+restartPolicyMaxRetries = 10

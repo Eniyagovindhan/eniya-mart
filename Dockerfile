@@ -24,4 +24,6 @@ WORKDIR /app
 COPY --from=build /build/backend/target/*.jar app.jar
 
 EXPOSE 8080
-ENTRYPOINT ["java", "-XX:MaxRAMPercentage=70.0", "-jar", "app.jar"]
+# 60% cap leaves headroom under Railway's default 512 MB service
+# (Spring Boot + Hibernate + 10-connection pool fit comfortably).
+ENTRYPOINT ["java", "-XX:MaxRAMPercentage=60.0", "-jar", "app.jar"]
