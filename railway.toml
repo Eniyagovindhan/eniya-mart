@@ -1,0 +1,14 @@
+# Railway project configuration (auto-detected on `railway up`
+# and when connecting the GitHub repo in the dashboard).
+
+[build]
+builder = "DOCKERFILE"
+dockerfilePath = "./Dockerfile"
+
+[deploy]
+# "/" serves index.html once Spring Boot is fully up (DB connected,
+# seeder finished), so a 200 here means the whole app is ready.
+healthcheckPath = "/"
+healthcheckTimeout = 120
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 5

@@ -1,3 +1,17 @@
+# Build output
 backend/target/
 *.class
 *.jar
+
+# IDE / editor
+.idea/
+.vscode/
+*.iml
+.settings/
+.project
+.classpath
+
+# Logs & OS junk
+*.log
+.DS_Store
+Thumbs.db
